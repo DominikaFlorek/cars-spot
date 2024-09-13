@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/img/Vector (Stroke).png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cars Spot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="slider/slider.css" />
+  </head>
+  <body class="m-0 box-border p-0">
+    <header
+      class="relative bg-primary-white px-14 py-4 font-robotoFlex text-sm md:text-base lg:px-[120px]"
+    >
+      <div class="flex items-center justify-between gap-8 md:gap-12">
+        <div>
+          <img src="/img/logo.png" alt="logo" />
+        </div>
+        <div class="z-10 flex gap-6">
+          <a class="md:hidden" href="#gallery">Galeria</a>
+          <a class="hidden md:block" href="#gallery">Galeria zdjęć</a>
+          <a href="#question">FaQ</a>
+        </div>
+        <div class="z-10">
+          <a
+            href="tel:+48500600700"
+            class="z-10 hidden rounded-lg bg-cornflower-blue px-4 py-2 text-sm font-semibold tracking-[-0.3px] text-primary-white sm:block lg:px-6 lg:py-3 lg:text-[15px]"
+          >
+            Zadzwoń do nas
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="flex bg-primary-white px-14 py-7 sm:p-14 md:min-h-[720px] lg:min-h-[825px] lg:p-[120px]"
+    >
+      <div class="absolute right-[70px] top-0 z-0 hidden md:block">
+        <img src="/img/Element.png" />
+      </div>
+
+      <div class="z-10">
+        <div class="mb-8 text-primary-black md:mb-12">
+          <h1
+            class="mb-8 font-bebas text-3xl uppercase tracking-[-1px] sm:text-4xl md:text-6xl md:tracking-[-3px] lg:text-7xl"
+          >
+            sprzedajemy samochody <span class="block">z europy</span>
+          </h1>
+          <p class="font-robotoCondensed text-sm md:text-base">
+            Kup komfortowy pojazd, aby każda podróż
+            <span class="block">była wyjątkowym przeżyciem.</span>
+          </p>
+        </div>
+
+        <div
+          class="z-10 space-x-2 font-robotoFlex text-xs font-semibold tracking-[-0.3px] sm:space-x-6 sm:text-sm md:text-[15px]"
+        >
+          <a
+            href="#gallery"
+            class="rounded-md bg-cornflower-blue px-1.5 py-1.5 text-primary-white sm:px-3 md:rounded-lg md:px-8 md:py-3"
+          >
+            Zobacz zdjęcia
+          </a>
+          <a
+            href="tel:+48500600700"
+            class="rounded-md border border-cornflower-blue bg-primary-white px-1.5 py-1.5 text-cornflower-blue sm:px-3 md:rounded-lg md:px-8 md:py-3"
+            >Zadzwoń do nas</a
+          >
+        </div>
+      </div>
+
+      <div class="z-10 hidden md:block md:pt-6">
+        <img
+          class="absolute right-0 md:top-[450px] min-[1200px]:top-96"
+          src="/img/Hero.png"
+          alt="Czarne samochody"
+        />
+        <img
+          class="absolute right-0 md:top-[450px] min-[1200px]:top-96"
+          src="/img/shadow.png"
+          alt="cień pod autami"
+        />
+      </div>
+    </section>
+
+    <section
+      id="gallery"
+      class="bg-primary-white px-14 py-4 md:pt-10 lg:px-[120px] lg:pt-16"
+    >
+      <div>
+        <div class="mb-6">
+          <p
+            class="mb-2 font-robotoCondensed text-base text-cornflower-blue md:text-[21.5px]"
+          >
+            Prezentacja firmy
+          </p>
+          <p
+            class="font-bebas text-3xl text-secondary-black sm:text-4xl md:text-[40px]"
+          >
+            Zobacz naszą galerię zdjęć
+          </p>
+        </div>
+
+        <div
+          class="flex space-x-2 font-robotoFlex text-sm sm:space-x-14 sm:text-[15px]"
+        >
+          <button
+            id="carBtn"
+            class="border-b border-cornflower-blue font-semibold tracking-[-0.3px] text-cornflower-blue"
+          >
+            Samochody osobowe
+          </button>
+          <button id="vanBtn">Samochody dostawcze</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cars">
+      <div class="swiper mySwiper bg-primary-white">
+        <div
+          class="swiper-wrapper mb-16 flex py-12 sm:px-14 md:gap-10 md:py-[80px] lg:px-[120px]"
+        >
+          <img class="swiper-slide" src="/img/redCar.png" alt="Czerwone auto" />
+          <img class="swiper-slide" src="/img/blackCar.png" alt="Czarne auto" />
+          <img
+            class="swiper-slide"
+            src="/img/frontCar.png"
+            alt="Lampa przednia auta"
+          />
+          <img
+            class="swiper-slide"
+            src="/img/pexels-mikebirdy-244206 blue.jpg"
+            alt="Niebieskie audi"
+          />
+          <img
+            class="swiper-slide"
+            src="/img//pexels-mikebirdy-244206.jpg"
+            alt="Pomarańczowe auto"
+          />
+        </div>
+        <div class="swiper-pagination mb-16"></div>
+      </div>
+    </section>
+
+    <section id="deliveryVans" class="hidden">
+      <div class="swiper mySwiper bg-primary-white">
+        <div
+          class="swiper-wrapper mb-16 flex py-12 sm:px-14 md:gap-10 md:py-[80px] lg:px-[120px]"
+        >
+          <img
+            class="swiper-slide"
+            src="/img/pexels-norma-mortenson-4391470.jpg"
+            alt="Biały van"
+          />
+          <img
+            class="swiper-slide"
+            src="/img/pexels-alexey-makarov-2.jpg"
+            alt="Ciężarówka"
+          />
+          <img
+            class="swiper-slide"
+            src="/img/pexels-mikhail-nilov-28123708.jpg"
+            alt="Karetka"
+          />
+          <img
+            class="swiper-slide"
+            src="img/pexels-tima-miroshnichenko-6169591.jpg"
+            alt="Bok białego vana"
+          />
+          <img
+            class="swiper-slide"
+            src="/img/pexels-felix-haumann-1938529-3796556.jpg"
+            alt="Beżowy van"
+          />
+        </div>
+        <div class="swiper-pagination mb-16"></div>
+      </div>
+    </section>
+
+    <section id="question" class="bg-[#282828] text-white">
+      <div
+        class="flex flex-col justify-between gap-10 p-14 md:flex-row lg:gap-20 lg:px-[120px] lg:py-[88px]"
+      >
+        <div class="md:w-1/2">
+          <p
+            class="py-2 font-bebas text-xl uppercase md:py-4 md:text-[25px] md:tracking-[-0.75px]"
+          >
+            Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
+            nulla commodo.
+          </p>
+          <div class="font-robotoCondensed text-sm">
+            <p class="paragraph1 py-2 md:py-4">
+              Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
+              Donec egestas, nisl vehicula feugiat ornare, diam turpis efficitur
+              mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+            </p>
+            <p class="paragraph1 hidden py-2 md:py-4">
+              Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
+              Donec egestas, nisl vehicula feugiat ornare, diam turpis efficitur
+              mi, ac venenatis eros ipsum ac arcu. Vestibulum et lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Laborum quo tempora
+              libero, sit earum ad amet quisquam quam consequuntur nemo?
+              Deleniti veniam, repellendus minima in quae id esse ratione
+              labore.
+            </p>
+            <div class="cursor-pointer py-4">
+              <button class="btn1 flex items-center border-b-2 py-1.5">
+                Rozwiń
+                <span class="ml-2">
+                  <img src="img/downarrow.svg" alt="Rozwiń sekcję" />
+                </span>
+              </button>
+              <button class="btn1 hidden items-center border-b-2 py-1.5">
+                Zwiń
+                <span class="inline-block text-xl"
+                  ><i class="ti ti-arrow-up"></i
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:w-1/2">
+          <p
+            class="py-2 font-bebas text-xl uppercase md:py-4 md:text-[25px] md:tracking-[-0.75px]"
+          >
+            Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
+            nulla commodo.
+          </p>
+          <div class="font-robotoCondensed text-sm">
+            <p class="paragraph2 py-2 md:py-4">
+              Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
+              Donec egestas, nisl vehicula feugiat ornare, diam turpis efficitur
+              mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+            </p>
+            <p class="paragraph2 hidden py-2 md:py-4">
+              Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
+              Donec egestas, nisl vehicula feugiat ornare, diam turpis efficitur
+              mi, ac venenatis eros ipsum ac arcu. Vestibulum et lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Laborum quo tempora
+              libero, sit earum ad amet quisquam quam consequuntur nemo?
+              Deleniti veniam, repellendus minima in quae id esse ratione
+              labore.
+            </p>
+            <div class="cursor-pointer py-4">
+              <button class="btn2 flex items-center border-b-2 py-1.5">
+                Rozwiń
+                <span class="ml-2">
+                  <img src="img/downarrow.svg" />
+                </span>
+              </button>
+              <button class="btn2 hidden items-center border-b-2 py-1.5">
+                Zwiń
+                <span class="inline-block">
+                  <i class="ti ti-arrow-up"></i
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="flex items-center justify-between border-t border-t-white bg-[#282828] px-14 py-3 font-robotoCondensed text-sm text-white sm:py-6 md:text-base lg:px-[120px]"
+    >
+      <p class="font-bold">Cars Spot</p>
+      <p class="cursor-pointer underline">Polityka prywatności</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="slider/slider.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
